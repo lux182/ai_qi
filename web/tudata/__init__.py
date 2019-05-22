@@ -99,8 +99,8 @@ def fs_tick(code, date, del_duplicate=True):
         df = fetch_tick(code, date)
         if df is not None:
             write2db(df, TN_TICK, if_exists='append')
-            if del_duplicate:
-                _delete_duplicate_data(TN_TICK, 'code', 'date', 'time')
+            # if del_duplicate:
+                # _delete_duplicate_data(TN_TICK, 'code', 'date', 'time')
 
 
 def fs_tick_r(code, begin_date, end_date, del_duplicate=True):

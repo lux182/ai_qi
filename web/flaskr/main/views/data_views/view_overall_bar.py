@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import tudata as tu
 from flask import render_template, make_response, request

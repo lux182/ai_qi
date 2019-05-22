@@ -31,7 +31,7 @@ def fetch_tick(code,date):
     :param date:
     :return:
     '''
-    df = ts.get_tick_data(code, date=date)
+    df = ts.get_tick_data(code, date=date,src='tt')
     df['code'] = code
     df['date'] = date
     if len(df) <= 3 and len(df['time'][0]) > 8:

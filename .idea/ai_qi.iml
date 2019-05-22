@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.0 virtualenv at ~/pyenv3/ai_qi" jdkType="Python SDK" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/web/tudata" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/utils" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/_cache" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/dataset" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/dataset_models" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/dataset_preproces" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/flaskr" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/migrations" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/api" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.7 (v37)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="renderExternalDocumentation" value="true" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

@@ -7,8 +7,8 @@ from sqlalchemy.orm import sessionmaker
 
 import pandas as pd
 
-set_db_config('sqlite','tu','root','root')
-
+# set_db_config('sqlite','tu','root','root')
+set_db_config('mysql','test2','root','')
 # 股票基本信息表名
 TN_STOCK = "stock"
 # 股票行业表名

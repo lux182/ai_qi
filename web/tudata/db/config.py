@@ -4,11 +4,17 @@ global _engine
 
 support_db_types = ["sqlite", "mysql"]
 
+# db_config = {
+#     'engine_type': 'sqlite',
+#     'db_name': 'tu',
+#     'user_name': 'root',
+#     'pass_word': 'root'
+# }
 db_config = {
-    'engine_type': 'sqlite',
-    'db_name': 'tu',
+    'engine_type': 'mysql',
+    'db_name': 'test2',
     'user_name': 'root',
-    'pass_word': 'root'
+    'pass_word': ''
 }
 
 

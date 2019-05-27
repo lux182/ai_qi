@@ -79,7 +79,7 @@ def query_top(table_name, top=100):
     :param top:
     :return:
     '''
-    return read_sql("select * from '%s' limit %s" % (table_name, top))
+    return read_sql("select * from %s limit %s" % (table_name, top))
 
 
 def query_all(table_name):
@@ -88,7 +88,7 @@ def query_all(table_name):
     :param table_name:
     :return:
     '''
-    return read_sql("select * from '%s'" % table_name)
+    return read_sql("select * from %s " % table_name)
 
 
 def query_trans_d(code, start_date, end_date=strutils.todayStr()):
@@ -99,5 +99,5 @@ def query_trans_d(code, start_date, end_date=strutils.todayStr()):
     :param end_date:
     :return:
     '''
-    return read_sql("select * from '%s' where date >= '%s' and date <= '%s' and code = '%s';" % (
+    return read_sql("select * from %s where date >= '%s' and date <= '%s' and code = '%s';" % (
     TN_TRANSACTION_D, start_date, end_date, code))

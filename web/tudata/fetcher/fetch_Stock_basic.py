@@ -56,7 +56,7 @@ def check_is_exist(date):
     :return:
     '''
     try:
-        old_df = read_sql("select * from '%s' where date = '%s'" % (TN_STOCK_BASICS_DAILY, date))
+        old_df = read_sql("select * from %s where date = '%s'" % (TN_STOCK_BASICS_DAILY, date))
         return old_df.size > 0
     except:
         return False

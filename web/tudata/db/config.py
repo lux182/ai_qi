@@ -24,7 +24,7 @@ def get_conn():
     :return:
     '''
     if db_config['engine_type'] == 'mysql':
-        conn = 'mysql+mysqlconnector://%s:%s@localhost:3306/%s?charset=utf8' % (
+        conn = 'mysql+pymysql://%s:%s@localhost:3306/%s?charset=utf8' % (
             db_config['user_name'], db_config['pass_word'], db_config['db_name'])
     else:
         conn = 'sqlite:///%s.db' % db_config['db_name']

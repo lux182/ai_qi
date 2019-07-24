@@ -17,9 +17,16 @@ def vectorize_sequences(sequences, dimension=10000):
         results[i, sequence] = 1.  # set specific indices of results[i] to 1s
     return results
 
-
+# train_data包含25000个list，每个list最大size为9999，里面的数字代表对应字典的单词
+# class list
+print(type(train_data[0]))
 # Our vectorized training data
+# 将其中的list转为array，将数字转为one-hot编码
 x_train = vectorize_sequences(train_data)
+print(x_train.ndim)
+print(x_train.shape)
+print(x_train[0])
+print(type(x_train[0]))
 # Our vectorized test data
 x_test = vectorize_sequences(test_data)
 
@@ -58,8 +65,10 @@ val_loss = history.history['val_loss']
 epochs = range(1, len(acc) + 1)
 
 # "bo" is for "blue dot"
+# 训练损失
 plt.plot(epochs, loss, 'bo', label='Training loss')
 # b is for "solid blue line"
+# 验证损失
 plt.plot(epochs, val_loss, 'b', label='Validation loss')
 plt.title('Training and validation loss')
 plt.xlabel('Epochs')
@@ -67,3 +76,30 @@ plt.ylabel('Loss')
 plt.legend()
 
 plt.show()
+
+
+# plt.clf()   # clear figure
+# acc_values = history_dict['acc']
+# val_acc_values = history_dict['val_acc']
+# 训练精度
+# plt.plot(epochs, acc, 'bo', label='Training acc')
+# 验证精度
+# plt.plot(epochs, val_acc, 'b', label='Validation acc')
+# plt.title('Training and validation accuracy')
+# plt.xlabel('Epochs')
+# plt.ylabel('Loss')
+# plt.legend()
+#
+# plt.show()
+
+
+# 过拟合，减少训练轮次epochs
+# model.compile(optimizer='rmsprop',
+#               loss='binary_crossentropy',
+#               metrics=['accuracy'])
+#
+# model.fit(x_train, y_train, epochs=4, batch_size=512)
+# results = model.evaluate(x_test, y_test)
+
+# 检验训练结果，
+# model.predict(x_test)

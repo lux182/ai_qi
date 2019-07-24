@@ -13,8 +13,8 @@ def queryStockNames():
 
     result = []
     if word:
-        sql = "select name, code from stock where name like '%" + str(word) + "%' or code like '%" + str(
-            word) + "%' limit 10"
+        sql = "select name, code from stock where name like '%%" + str(word) + "%%' or code like '%%" + str(
+            word) + "%%' limit 10"
         df = tu.read_sql(sql)
 
         if df is not None:

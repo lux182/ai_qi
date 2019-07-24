@@ -24,14 +24,15 @@ amount = Column(BIGINT)
 type = Column(String)
 '''
 
-def fetch_tick(code,date):
+
+def fetch_tick(code, date):
     '''
     获取指定股票指定日期的分笔数据记录
     :param code:
     :param date:
     :return:
     '''
-    df = ts.get_tick_data(code, date=date,src='tt')
+    df = ts.get_tick_data(code, date=date, src='tt')
     df['code'] = code
     df['date'] = date
     if len(df) <= 3 and len(df['time'][0]) > 8:

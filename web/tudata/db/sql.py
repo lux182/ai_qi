@@ -17,7 +17,7 @@ def sql_delete_duplicate_data(table_name, *fields):
 
     sql = "delete from %(table_name)s where " \
           "(%(fields)s) in (select %(fields)s from %(table_name)s group by %(fields)s having count(*) > 1)" \
-          " and rowid not in (select min(rowid) " \
+          " and id not in (select min(id) " \
           "from %(table_name)s group by %(fields)s having count(*)>1)" % \
           {'table_name': table_name, 'fields': fields_str}
     print("sql >> %s" % sql)

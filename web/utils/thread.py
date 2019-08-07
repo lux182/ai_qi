@@ -1,7 +1,6 @@
-from threadpool import ThreadPool,makeRequests
+from threadpool import ThreadPool, makeRequests
 
 import time
-
 
 
 def sayhello(str):
@@ -9,12 +8,14 @@ def sayhello(str):
     time.sleep(2)
     return str + "---"
 
-def callback(arg1,arg2):
+
+def callback(arg1, arg2):
     print("success")
     print(arg2)
 
+
 pool = ThreadPool(10)
-requests = makeRequests(sayhello, ["aaa","bbb","ccc"],callback=callback)
+requests = makeRequests(sayhello, ["aaa", "bbb", "ccc"], callback=callback)
 [pool.putRequest(req) for req in requests]
 
 print(">>>>>")
@@ -24,4 +25,3 @@ print(">>>>>")
 #     print(r)
 
 pool.wait()
-

@@ -16,11 +16,15 @@ train_images = train_images.astype('float32') / 255
 test_images = test_images.reshape((10000, 28 * 28))
 test_images = test_images.astype('float32') / 255
 
+#(60000,)
 print(train_labels.shape)
+# 5
 print(train_labels[0])
-# 将向量转化为矩阵
+# 将测试标签向量转化为矩阵（独热编码）
 train_labels = to_categorical(train_labels)
+# (60000, 10)
 print(train_labels.shape)
+# [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
 print(train_labels[0])
 test_labels = to_categorical(test_labels)
 

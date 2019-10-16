@@ -58,16 +58,14 @@ print(partial_y_train.shape)
 history = model.fit(partial_x_train,partial_y_train,epochs=20,batch_size=512,validation_data=(x_val,y_val))
 
 # 绘制训练损失和验证损失
-loss = history.history['loss']
-val_loss = history.history['val_loss']
-
-epochs = range(1,len(loss) +1 )
-
-plt.plot(epochs,loss,'bo',label ='Training loss')
-plt.plot(epochs,val_loss,'b',label='Validation loss')
-plt.title('Training and validation loss')
-plt.xlabel('Epochs')
-plt.ylabel('Loss')
-plt.legend
-plt.show()
+# loss = history.history['loss']
+# val_loss = history.history['val_loss']
+# epochs = range(1,len(loss) +1 )
+# plt.plot(epochs,loss,'bo',label ='Training loss')
+# plt.plot(epochs,val_loss,'b',label='Validation loss')
+# plt.title('Training and validation loss')
+# plt.xlabel('Epochs')
+# plt.ylabel('Loss')
+# plt.legend
+# plt.show()
 
